@@ -10,14 +10,7 @@ import {
 
 import homeImg from "../../assets/home.png";
 
-export default function Adress({ navigation }) {
-  const handleAdressVerif = () => {
-    navigation.navigate("tabRoot", {
-      screen: "Home",
-      params: { screen: "AdressVerif" },
-    });
-  };
-
+export default function AdressVerif() {
   return (
     <ScrollView
       style={styles.container}
@@ -27,11 +20,10 @@ export default function Adress({ navigation }) {
         <Image source={homeImg} alt="img" style={styles.imgHome} />
       </View>
       <Text style={styles.name}>Meus endereços</Text>
-      <TouchableOpacity style={styles.addressCard} onPress={handleAdressVerif}>
-        <Text style={styles.label}>
-          Rua Celeste, Jardim Aurora, Vinhedo-SP n° 100
-        </Text>
-      </TouchableOpacity>
+      <View style={styles.addressCard}>
+        <Image source={homeImg} alt="img" style={styles.homeImgCard} />
+        <Text style={styles.label}>Enderço Principal - Verifcado</Text>
+      </View>
     </ScrollView>
   );
 }
@@ -45,6 +37,12 @@ const styles = StyleSheet.create({
   imgHome: {
     width: 100,
     height: 100,
+  },
+
+  homeImgCard: {
+    width: 40,
+    height: 40,
+    marginBottom: 20
   },
 
   homeCard: {

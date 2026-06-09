@@ -1,38 +1,19 @@
-import { View, Text, StyleSheet, Image } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
-import suport from "../../assets/suport.png";
+import { Text, View, StyleSheet, Image } from "react-native";
+import call from "../../assets/call.png";
 
 export default function Suport() {
   return (
     <View style={styles.container}>
-      <View style={styles.topBand} />
-
-      <View style={styles.content}>
-        <View style={styles.heroCircle}>
-          <Image source={suport} style={styles.supportImage} />
-        </View>
-
-        <Text style={styles.title}>Suporte</Text>
-
-        <View style={styles.supportCard}>
-          <Text style={styles.infoText}>Telefone: 11 20930-0120</Text>
-          <Text style={styles.infoText}>Email: vlitestoreoficial@gmail.com</Text>
-        </View>
+      <View style={styles.suportCard}>
+        <Image source={call} alt="img" style={styles.imgCall} />
       </View>
+      <Text style={styles.name}>Suporte</Text>
 
-      <View style={styles.bottomBar}>
-        <Ionicons name="home-outline" size={27} color="#111111" />
-        <Ionicons name="search-outline" size={30} color="#111111" />
-        <View style={styles.tabBagIcon}>
-          <Ionicons name="bag-handle-outline" size={28} color="#111111" />
-          <Ionicons
-            name="checkmark-outline"
-            size={14}
-            color="#111111"
-            style={styles.tabBagCheck}
-          />
-        </View>
-        <Ionicons name="person-outline" size={27} color="#111111" />
+      <View style={styles.boxSuport}>
+       
+          <Text style={styles.text}>Telefone: 11 20930-0120</Text>
+          <Text style={styles.text}>Email: vlitestoreoficial@gmail.com</Text>
+
       </View>
     </View>
   );
@@ -41,76 +22,39 @@ export default function Suport() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FFFFFF",
-  },
-  topBand: {
-    height: 62,
-    backgroundColor: "#ECF1FF",
-  },
-  content: {
-    flex: 1,
     alignItems: "center",
-    paddingHorizontal: 18,
   },
-  heroCircle: {
-    width: 104,
-    height: 104,
-    borderRadius: 52,
+  suportCard: {
+    marginTop: 50,
+    width: 150,
+    height: 150,
     backgroundColor: "#ECF1FF",
+    borderRadius: 75,
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 40,
   },
-  supportImage: {
-    width: 70,
-    height: 70,
-    resizeMode: "contain",
+
+  imgCall: {
+    width: 100,
+    height: 100,
+    borderRadius: 75,
   },
-  title: {
-    marginTop: 10,
-    marginBottom: 38,
-    fontSize: 13,
-    color: "#111111",
-    fontWeight: "500",
-  },
-  supportCard: {
-    width: "100%",
-    maxWidth: 348,
-    height: 123,
-    borderRadius: 4,
+
+  boxSuport: {
+    marginTop: 50,
+
     backgroundColor: "#ECF1FF",
-    justifyContent: "center",
-    paddingHorizontal: 20,
-    shadowColor: "#000000",
+    shadowColor: "#000",
     shadowOffset: { width: -1, height: 4 },
-    shadowOpacity: 0.22,
+    elevation: 2,
     shadowRadius: 2,
-    elevation: 3,
-  },
-  infoText: {
-    fontSize: 8,
-    color: "#111111",
-    marginBottom: 26,
-  },
-  bottomBar: {
-    height: 39,
-    backgroundColor: "#ECF1FF",
-    borderTopWidth: 1,
-    borderTopColor: "#DCE3F5",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-around",
-    paddingHorizontal: 8,
-  },
-  tabBagIcon: {
-    width: 30,
-    height: 30,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  tabBagCheck: {
-    position: "absolute",
-    right: 1,
-    bottom: 3,
-  },
+    shadowOpacity: 0.2,
+    paddingLeft: 20,
+    paddingTop: 20,
+    width: 350,
+    height: 200,
+    borderRadius: 8,
+    gap: 50
+
+  }
 });
