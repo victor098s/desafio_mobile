@@ -11,7 +11,7 @@ import { useFonts } from "expo-font";
 
 export default function Login({ navigation }) {
   const handleLogin = () => {
-    navigation.navigate("Home");
+    navigation.navigate("drawerRoot");
   };
 
   const [fontsLoaded] = useFonts({

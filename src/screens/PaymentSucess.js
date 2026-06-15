@@ -4,7 +4,7 @@ import { useFonts } from "expo-font";
 
 export default function PaymentSucess({ navigation }) {
   const HandleBack = () => {
-    navigation.navigate("homeScreen");
+    navigation.navigate("drawerRoot");
   };
 
   const [fontsLoaded] = useFonts({
