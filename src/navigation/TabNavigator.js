@@ -15,6 +15,8 @@ import PaymentSucess from "../screens/PaymentSucess";
 import DrawerNavigator from "./DrawerNavigator";
 import AdressVerif from "../screens/AdressVerif";
 import Adress from "../screens/Adress";
+import Payment from "../screens/Payment";
+import Config from "../screens/Config";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -50,6 +52,8 @@ function HomeStack() {
       <Stack.Screen name="Suport" component={Suport} />
       <Stack.Screen name="AdressVerif" component={AdressVerif} />
       <Stack.Screen name="Adress" component={Adress} />
+      <Stack.Screen name="Payment" component={Payment} />
+      <Stack.Screen name="Config" component={Config} />
     </Stack.Navigator>
   );
 }

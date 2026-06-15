@@ -23,7 +23,16 @@ export default function DrawerNavigator() {
       />
       <Drawer.Screen
         name="Formas de pagamento"
-        component={Payment}
+        component={Home}
+        listeners={({ navigation }) => ({
+          drawerItemPress: (e) => {
+            e.preventDefault();
+            navigation.navigate("tabRoot", {
+              screen: "Home",
+              params: { screen: "Payment" },
+            });
+          },
+        })}
         options={{ headerTitle: "VliteStore" }}
       />
       <Drawer.Screen
@@ -39,7 +48,19 @@ export default function DrawerNavigator() {
           },
         })}
       />
-      <Drawer.Screen name="Configurações" component={Config} />
+      <Drawer.Screen
+        name="Config"
+        component={Config}
+        listeners={({ navigation }) => ({
+          drawerItemPress: (e) => {
+            e.preventDefault();
+            navigation.navigate("tabRoot", {
+              screen: "Home",
+              params: { screen: "Config" },
+            });
+          },
+        })}
+      />
       <Drawer.Screen
         name="Suporte"
         component={Suport}
