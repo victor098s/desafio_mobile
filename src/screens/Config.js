@@ -6,8 +6,10 @@ import {
   Switch,
   TextInput,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import { useState } from "react";
+import logoImg from "../../assets/settings.png";
 
 export default function Config() {
   return (
@@ -15,6 +17,10 @@ export default function Config() {
       style={styles.container}
       contentContainerStyle={{ alignItems: "center" }}
     >
+      <View style={styles.configHero}>
+        <Image style={styles.imgConfig} source={logoImg} alt="Logo" />
+      </View>
+      <Text style={styles.titulo}>Configurações</Text>
       <View style={styles.configCard}>
         <View style={styles.alterPassword}>
           <Text style={styles.label}>Alterar Senha</Text>
@@ -75,6 +81,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  configHero: {
+    width: 150,
+    height: 150,
+    backgroundColor: "#ECF1FF",
+    borderRadius: 75, // Corrigido de "50%" para número absoluto
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  titulo: {
+    marginBottom: 20,
+  },
+  imgConfig: {
+    width: 100,
+    height: 100,
+  },
+
   configCard: {
     width: 350,
     height: 400,
@@ -118,7 +141,7 @@ const styles = StyleSheet.create({
     height: 23,
     backgroundColor: "#D1D1D1",
     borderRadius: 8,
-    padding: 10
+    padding: 10,
   },
   btn: {
     width: 42,

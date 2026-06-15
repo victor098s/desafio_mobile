@@ -49,7 +49,7 @@ export default function DrawerNavigator() {
         })}
       />
       <Drawer.Screen
-        name="Config"
+        name="Configurações"
         component={Config}
         listeners={({ navigation }) => ({
           drawerItemPress: (e) => {
